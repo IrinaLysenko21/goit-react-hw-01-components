@@ -1,0 +1,53 @@
+@value variables: '../../variables.css';
+@value primary-font-stack, color-dark-grey, primary-box-shadow from variables;
+
+.statistics {
+  width: 100%;
+  max-width: 700px;
+  font-family: primary-font-stack;
+  border-radius: 10px;
+  box-shadow: primary-box-shadow;
+}
+
+.title {
+  padding-top: 40px;
+  margin: 0 0 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  color: color-dark-grey;
+}
+
+.statsList {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 100%;
+  min-width: 40px;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.item:first-child {
+  border-radius: 0 0 0 10px;
+}
+
+.item:last-child {
+  border-radius: 0 0 10px 0;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.percentage {
+  font-size: 24px;
+}

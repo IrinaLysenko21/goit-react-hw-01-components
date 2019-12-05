@@ -1,0 +1,60 @@
+@value variables: '../../variables.css';
+@value primary-font-stack, color-dark-grey, primary-box-shadow from variables;
+
+.friendList {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  flex-basis: 100%;
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: primary-box-shadow;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.status {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: rgb(90, 90, 90);
+}
+
+.statusOnline {
+  composes: status;
+  background-color: rgb(9, 172, 9);
+}
+
+.statusOffline {
+  composes: status;
+  background-color: rgb(223, 28, 28);
+}
+
+.avatar {
+  margin-right: 20px;
+  border-radius: 5px;
+}
+
+.name {
+  font-family: primary-font-stack;
+  color: color-dark-grey;
+  font-size: 28px;
+}
+
+@media (min-width: 768px) {
+  .friendList {
+    width: 50%;
+  }
+}
