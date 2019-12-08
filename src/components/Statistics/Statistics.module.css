@@ -1,4 +1,4 @@
-@value variables: '../../variables.css';
+@value variables: '../../variables.module.css';
 @value primary-font-stack, color-dark-grey, primary-box-shadow from variables;
 
 .statistics {

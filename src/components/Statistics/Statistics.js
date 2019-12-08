@@ -7,9 +7,8 @@ const getRandomColor = () => {
   for (let i = 0; i < 3; i += 1) {
     rgb.push(Math.floor(Math.random() * (255 - 0 + 1)) + 0);
   }
-  const rgbColor = `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
 
-  return rgbColor;
+  return `rgb(${rgb.join(',')})`;
 };
 
 const Statistics = ({ title, stats }) => {
@@ -18,13 +17,11 @@ const Statistics = ({ title, stats }) => {
       {title && <h2 className={styles.title}>{title}</h2>}
       <ul className={styles.statsList}>
         {stats.map(el => {
-          const color = getRandomColor();
-
           return (
             <li
               key={el.id}
               className={styles.item}
-              style={{ backgroundColor: `${color}` }}
+              style={{ backgroundColor: `${getRandomColor()}` }}
             >
               <span className={styles.label}>{el.label}</span>
               <span className={styles.percentage}>{el.percentage}%</span>
@@ -37,7 +34,7 @@ const Statistics = ({ title, stats }) => {
 };
 
 Statistics.defaultProps = {
-  title: '',
+  title: 'Statistics',
 };
 
 Statistics.propTypes = {
