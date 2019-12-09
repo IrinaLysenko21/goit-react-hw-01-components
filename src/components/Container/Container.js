@@ -2,20 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Container.module.css';
 
-const Container = ({ title, children }) => (
-  <div className={styles.container}>
-    {title && <h2 className={styles.title}>{title}</h2>}
-    {children}
-  </div>
+const Container = ({ children }) => (
+  <div className={styles.container}>{children}</div>
 );
 
-Container.defaultProps = {
-  title: '',
-};
-
 Container.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.element.isRequired,
+  children: PropTypes.arrayOf(PropTypes.element.isRequired).isRequired,
 };
 
 export default Container;

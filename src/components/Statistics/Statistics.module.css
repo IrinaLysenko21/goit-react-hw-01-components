@@ -4,6 +4,7 @@
 .statistics {
   width: 100%;
   max-width: 700px;
+  margin-bottom: 30px;
   font-family: primary-font-stack;
   border-radius: 10px;
   box-shadow: primary-box-shadow;
